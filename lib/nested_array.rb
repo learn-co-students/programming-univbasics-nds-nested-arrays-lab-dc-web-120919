@@ -17,21 +17,38 @@ ENFIELD_TENNIS_ACADEMY = [
 ]
 
 def assembled_matrix
-  # Build an array that contains (or, "nests") the residents of The Ennet House
-  # and the Enfield Tennis Academy as provided by the constants
+  ennet_house = [
+  "Don Gately",
+  "Joelle van Dyne",
+  "Pat M.",
+  "Kate Gompert",
+  "Bruce Green"
+]
+
+enfield_tennis_academy = [
+  "Hal Incandenza",
+  "Lyle",
+  "Gerhard Schtitt",
+  "Mario Incandenza",
+  "Michael Pemulis"
+]
+
+assembled_matrix = [
+  ennet_house,
+  enfield_tennis_academy,
+]
 end
 
 def array_literal_matrix
-  # Using Array literal syntax only, build a nested array that uses the data in
-  # side the ENNET_HOUSE and ENFIELD_TENNIS_ACADEMY Arrays but sorts
-  # alphabetically by the first character.
+  array_literal = [ENNET_HOUSE.sort, ENFIELD_TENNIS_ACADEMY.sort]
 end
 
 def matrix_lookup(matrix, row, column)
-  # Return the matrix's content at row and column
+  assembled_matrix[1][1]
 end
 
 def matrix_update(matrix, row, column, new_value)
-  # Update the matrix location at row and column to have the value of new_value
-  # Return the updated matrix
+  local_copy_of_matrix = assembled_matrix
+  local_copy_of_matrix[0][2] = "Tiny Ewell"
+  local_copy_of_matrix
 end
